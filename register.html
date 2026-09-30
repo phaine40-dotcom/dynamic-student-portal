@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+</head>
+<body>
+    <header>
+        <h1>Student Registration</h1>
+        <nav>
+                <a href="index.html">Home</a>
+                <a href="timetable.html">Timetable</a>
+                <a href="register.html">Register</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+            Email:
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" placeholder="Enter your date of birth" required><br><br>
+
+            <label for="course">Course of study:</label>
+            <select id="course" name="course" required>
+                <option value="">Select a course</option>
+                <option value="CS">Computer Science</option>
+                <option value="DS">Data Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="CE">Computer Engineering</option>
+            </select><br><br>
+    <fieldset>
+        <legend>Gender</legend>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+    </fieldset>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions.</label><br><br>
+    
+    <button type="submit">Submit Registration</button>
+    </form>
+    <h2>Admission Requirements</h2>
+    <ul>
+        <li>Completed application form</li>
+        <li>Official transcripts from previous schools</li>
+        <li>Proof of identity (passport or national ID)</li>
+        <li>Recent passport-sized photographs</li>
+        <li>Application fee receipt</li>
+    </ul>
+    <h2>Registration Steps</h2>
+    <ol>
+        <li>Fill out the registration form.</li>
+        <li>Select a course of study.</li>
+        <li>Upload required documents.</li>
+        <li>Pay the application fee.</li>
+        <li>Submit the application.</li>
+    </ol>
+    </main>
+    <footer>
+        <p>&copy; 2026 Dynamic Student Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

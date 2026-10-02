@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #9bd8f0;
+    color: #333333;
+}
+h1 {
+    color: #8B0000;
+}
+h2 {
+    color: #1a5276;
+}
+input, select, textarea {
+    padding: 8px;
+    margin: 8px 0;
+}
+button[type="submit"]{
+    background-color: #516db8;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

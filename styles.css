@@ -20,3 +20,19 @@ button[type="submit"]{
     border-radius: 5px;
     cursor: pointer;
 }
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  @media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }

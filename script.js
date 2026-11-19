@@ -28,27 +28,33 @@ if (registrationForm) {
     });
 }
 
-const students = [
-    "Alice Johnson",
-    "Bob Smith",
-    "Charlie Brown",
-    "Diana Wilson",
-    "Ethan Davis"
-];
-function addStudentToPage(name) {
+function addStudentToPage(student) {
     const listItem = document.createElement("li");
-    listItem.textContent = name;
+    listItem.textContent = 
+        student.name + " - " + 
+        student.course + " - Year " + 
+        student.year;
     document.getElementById("student-list").appendChild(listItem);
 }
-function displayAllStudents() {
-    students.forEach(function(name) {
-        addStudentToPage(name);
+function displayAllStudents(students) {
+    const studentList = document.getElementById("student-list");
+    
+    studentList.innerHTML = "";
+    
+    students.forEach(function(student) {
+        addStudentToPage(student);
     });
+    document.querySelector("#student-count").textContent = 
+        "Registered Students (" + students.length + ")";
 }
-const showStudentsButton = document.getElementById("show-students");
 
-showStudentsButton.addEventListener("click", function() {;
-   const studentList = document.getElementById("student-list");
-   studentList.innerHTML = "";
-   displayAllStudents(students);
-});
+fetch("students.json")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(students) {
+        displayAllStudents(students);
+    })
+    .catch(function(error) {
+        console.error("Error loading students:", error);
+    });

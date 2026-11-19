@@ -1,0 +1,27 @@
+[
+    {
+       "name": "Alice Johnson",
+       "course": "Computer Science",
+       "year": 2
+    },
+    {
+       "name": "Bob Smith",
+       "course": "Business Administration",
+       "year": 3
+    },
+    {
+       "name": "Charlie Brown",
+       "course": "Information Technology",
+       "year": 1
+    },
+    {
+         "name": "Diana Wilson",
+         "course": "Psychology",
+         "year": 4
+    },
+    {
+         "name": "Ethan Davis",
+         "course": "Mechanical Engineering",
+         "year": 2
+    }
+]

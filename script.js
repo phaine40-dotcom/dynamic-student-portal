@@ -27,3 +27,28 @@ if (registrationForm) {
         }
     });
 }
+
+const students = [
+    "Alice Johnson",
+    "Bob Smith",
+    "Charlie Brown",
+    "Diana Wilson",
+    "Ethan Davis"
+];
+function addStudentToPage(name) {
+    const listItem = document.createElement("li");
+    listItem.textContent = name;
+    document.getElementById("student-list").appendChild(listItem);
+}
+function displayAllStudents() {
+    students.forEach(function(name) {
+        addStudentToPage(name);
+    });
+}
+const showStudentsButton = document.getElementById("show-students");
+
+showStudentsButton.addEventListener("click", function() {;
+   const studentList = document.getElementById("student-list");
+   studentList.innerHTML = "";
+   displayAllStudents(students);
+});

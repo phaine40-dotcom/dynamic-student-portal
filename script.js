@@ -58,3 +58,60 @@ fetch("students.json")
     .catch(function(error) {
         console.error("Error loading students:", error);
     });
+
+class Student {
+    constructor(name, email, course) {
+        this.name = name;
+        this.email = email;
+        this.course = course;
+    }
+    getSummary(){
+        return `${this.name} is studying ${this.course}. Email: ${this.email}`;
+    }
+}
+
+const students = [
+    new Student("Alice Johnson", "alijohnson@ap.edu", "Computer Science"),
+    new Student("Bob Smith", "bobsmith@ap.edu", "Business Administration"),
+    new Student("Charlie Brown", "charliebrown@ap.edu", "Information Technology"),
+    new Student("Diana Wilson", "dianawilson@ap.edu", "Psychology"),
+    new Student("Ethan Davis", "ethandavis@ap.edu", "Mechanical Engineering")
+];
+ students.forEach(student => { 
+    console.log(student.getSummary());
+ });
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const nameRegex = /^[A-Za-z\s]+$/;
+
+if (registrationForm) {
+    registrationForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+
+        nameError.textContent = "";
+        emailError.textContent = "";
+
+        let isValid = true;
+
+        if (!nameRegex.test(name)) {
+            nameError.textContent = "Please enter a valid name using letters and spaces only.";
+            isValid = false;
+        }
+
+        if (!emailRegex.test(email)) {
+            emailError.textContent = "Please enter a valid email address.";
+            isValid = false;
+        }
+
+        if (isValid) {
+            alert("Registration successful!");
+            registrationForm.submit();
+        }
+    });
+}
